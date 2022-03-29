@@ -1,0 +1,31 @@
+<div class="row">
+  <h3>Registro de Citas</h3>
+
+  <div class="row mt-2">
+    <div class="col-3">
+      <a routerLink="/appointments/new" class="btn btn-primary">Nueva Cita</a>
+    </div>
+    <div class="col-3"></div>
+    <div class="col-3"></div>
+    <div class="col-3"></div>
+  </div>
+
+  <table class="table mt-2">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tramite</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Alumno</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let appointment of appointments">
+      <th scope="row">{{appointment.appointmentId}}</th>
+      <td>{{appointment.procedure}}</td>
+      <td>{{appointment.startDate | date:"long"}}</td>
+      <td>{{appointment.user.firstName}} {{appointment.user.lastName}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+<h3>Nueva Cita</h3>
+<form [formGroup]="createForm" (ngSubmit)="createAppointment()">
+  <div class="mb-3">
+    <label class="form-label">Tramite</label>
+    <select formControlName="procedure" class="form-select">
+      <option value="Reposición de Credencial">Reposición de Credencial</option>
+      <option value="Inscripción">Inscripción</option>
+      <option value="Kardex">Kardex</option>
+      <option value="Seguro">Seguro</option>
+      <option value="Titulación">Titulación</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Fecha</label>
+    <input formControlName="startDate" type="datetime-local" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
